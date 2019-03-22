@@ -7,9 +7,9 @@ The flow for generating the inverted index can be seen as the following:
 ##### Part 1: 
 
 The first part of the program as seen in the figure, generates the postings and URL Table. This is implemented in the function ‘Get_all_postings’. For each WET File, this function is called. It 
-• generates sorted postings for each WET file
-• populated the URL Table and writes it to file 
-• populates SQLite database to include text of each URL.
+- generates sorted postings for each WET file
+- populated the URL Table and writes it to file 
+- populates SQLite database to include text of each URL.
 
 The code does not include every URL encountered. The text is first stripped using Regular expressions. If the new text is at least 75% of the original text only then are the entries written to corresponding files.
 
@@ -44,31 +44,31 @@ The vbencode package, takes each number, keeps on dividing it by 128 and added t
 The whole code (WET files to inverted index) takes around 4 hours for 100 WET files.
 The most time consuming process in all of this is the get all postings function which takes 60 to 75 seconds per WET file.
 The files generated have the following sizes:
-• Index.dat (which stores the inverted index) : 4.15gb
-• Lexicon.dat : 511mb
-• WebTextInfo.sqllite: 18.7 gb
-• Webpage_infos.txt : 245mb
+- Index.dat (which stores the inverted index) : 4.15gb
+- Lexicon.dat : 511mb
+- WebTextInfo.sqllite: 18.7 gb
+- Webpage_infos.txt : 245mb
 ##### Packages needed: 
 
 Packages needed for running the webIndex.py:
 In order to run this code, the following packages are needed:
-• Vbcode:
+- Vbcode:
 By github user utahta 
 Link: https://pypi.org/project/vbcode/
 To encode the inverted index
-• glob
+- glob
 To get the files list in a directory
-• Collections
+- Collections
 For counting the frequencies of word
-• Heapq
+- Heapq
 For merging sorting files
-• Contextlib
+- Contextlib
 In merge files, the exitstack function closes all the opened files.
-• Timeit
+- Timeit
 To time the execution
-• Concurrent.futures
+- Concurrent.futures
 For parallel execution of some parts of the code.
-• Sqlitedict
+- Sqlitedict
 By RaRe Technologies
 Github link: https://github.com/RaRe-Technologies/sqlitedict
 For creating the database
