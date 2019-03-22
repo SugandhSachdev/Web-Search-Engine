@@ -1,4 +1,7 @@
+# A basic web search engine
+
 ## Inverted Index Generation:
+
 The inverted index has been compiled to have 100 WET files which result in approximately, 4 million documents. 
 The flow for generating the inverted index can be seen as the following:
 ** Part 1:** 
