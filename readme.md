@@ -81,7 +81,7 @@ For creating the database
 The code for this part of the program is in queryproc.py file:
 The code can be seen in the following flow:
 
-** Part 1: **
+##### Part 1: 
 
 The first part of the program, as seen in the figure, gets the lexicon from the file. It reads each line and writes it to a dictionary where the word is the key and value is an array containing start position, number of bytes for docIds, number of byters for Freq Ids
 This is implemented in the function names load_lex. It requires the lexicon.dat file to be located in the same directory as the code.
